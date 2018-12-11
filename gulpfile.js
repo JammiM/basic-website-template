@@ -62,3 +62,9 @@ gulp.task('serve', function () {
 
 
 gulp.task('default', ['img', 'mergejs', 'sass', 'copyHtml', 'serve']);
+
+// This task should be selected when the project is in development, the browser is refreshed whenever any change is detected.
+gulp.task('develop', ['sass', 'copyHtml', 'serve']);
+
+// This task should be selected when the project is completed and everything needs to be compressed to ssve bandwidth.
+gulp.task('compress', ['img', 'mergejs', 'sass', 'copyHtml']);
