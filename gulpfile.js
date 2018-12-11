@@ -3,10 +3,9 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const sync = require('browser-sync').create();
+const concat = require('gulp-concat');
 
-gulp.task('message', function(){
-  return console.log("blah");
-});
+
 
 gulp.task('copyHtml', () =>
   gulp.src('src/*.html')
@@ -37,7 +36,16 @@ gulp.task('sass', () =>
 
 
 
-// gulp.task('serve', ['sass'], function () {
+//Merges and minifies all the js files
+gulp.task('mergejs', () =>
+  gulp.src('src/js/*.js')
+      .pipe(concat('main.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('dist/js'))
+    //  .pipe(sync.stream())
+);
+
+
 gulp.task('serve', function () {
 
   // Starts the serve
@@ -53,4 +61,4 @@ gulp.task('serve', function () {
 })
 
 
-gulp.task('default', ['img', 'js', 'sass', 'message', 'copyHtml', 'serve']);
+gulp.task('default', ['img', 'mergejs', 'sass', 'copyHtml', 'serve']);
