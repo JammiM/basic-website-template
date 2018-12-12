@@ -1,4 +1,43 @@
 /**** BASE ****/
 body {
-  background: orange;
+  background: #f8f9fa;
+  color: #000; }
+
+header {
+  background: #423d3d;
   color: #D3D3D3; }
+
+.events {
+  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3; }
+  .events .holder {
+    border: 2px solid #495057;
+    border-radius: 4px;
+    padding: 10px; }
+
+.aboutUs {
+  background: #D3D3D3; }
+
+footer {
+  background: #423d3d;
+  color: #D3D3D3; }
+
+.box {
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #D3D3D3;
+  display: inline-block;
+  margin-left: 20px; }
+  .box img {
+    border-radius: 10px 10px 0 0; }
+  .box .inner-box {
+    background-color: white;
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 30px; }
+  .box .lowerbox {
+    border-top: 1px solid #D3D3D3; }
