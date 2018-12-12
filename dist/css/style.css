@@ -1,8 +1,4 @@
+/**** BASE ****/
 body {
-  background-color: #fff; }
-
-h1 {
-  color: blue; }
-
-p {
-  color: red; }
+  background: orange;
+  color: #D3D3D3; }

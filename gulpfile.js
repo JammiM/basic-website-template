@@ -28,7 +28,7 @@ gulp.task('js', () =>
 
 //Compiles all the sass files
 gulp.task('sass', () =>
-  gulp.src('src/scss/*.scss')
+  gulp.src('src/scss/*.sass')
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('dist/css'))
     //  .pipe(sync.stream())
@@ -55,7 +55,7 @@ gulp.task('serve', function () {
   })
 
   // Watches all changes in scss and html files
-  gulp.watch('src/scss/*.scss', ['sass']).on('change', sync.reload);
+  gulp.watch('src/scss/**/*.sass', ['sass']).on('change', sync.reload);
   gulp.watch('src/*.html', ['copyHtml']).on('change', sync.reload);
 
 })
